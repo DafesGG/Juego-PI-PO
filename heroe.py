@@ -20,16 +20,16 @@ class Heroe(Sprite):
 		
 		teclas = pygame.key.get_pressed()
 		if self.vida > 0:					
-			
+			self.puntos = self.puntos + 0.1
 			if teclas[K_UP] and self.rect.y>100:
 				self.rect.y -= 100
 				self.image = self.imagenes[0]
-				self.puntos = self.puntos + 1
+				
 				
 			elif teclas[K_DOWN] and self.rect.y<300:
 				self.rect.y += 100
 				self.image = self.imagenes[0]
-				self.puntos = self.puntos + 1
+				
 						
 		else:
 			self.image = self.imagenes[2]
